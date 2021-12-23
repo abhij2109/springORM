@@ -27,8 +27,21 @@ public class App {
 				int input = Integer.parseInt(br.readLine());
 				switch (input) {
 				case 1:
-
+					System.out.println("Enter the Id of student:");
+					int id=Integer.parseInt(br.readLine());
+					System.out.println("Enter the name of student:");
+					String name=br.readLine();
+					System.out.println("Enter the city of student:");
+					String city=br.readLine();
+					
+					Student student = new Student();
+					student.setId(id);
+					student.setName(name);
+					student.setCity(city);
+					int r=studentDao.insert(student);
+					System.out.println(r+" Row inserted.");
 					break;
+					
 				case 2:
 
 					break;
